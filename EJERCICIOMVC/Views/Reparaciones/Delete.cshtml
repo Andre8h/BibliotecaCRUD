@@ -1,0 +1,112 @@
+﻿@model EJERCICIOMVC.Models.Reparacion
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Reparacion</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RE_EjemplarCodigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RE_EjemplarCodigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RE_EstadoInicial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RE_EstadoInicial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RE_InicioReparacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RE_InicioReparacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RE_FinalizacionReparacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RE_FinalizacionReparacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RE_EstadoActualFisico)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RE_EstadoActualFisico)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RE_Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RE_Estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RE_FechaReIncorporacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RE_FechaReIncorporacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RE_FechaCreacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RE_FechaCreacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RE_FechaModificacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RE_FechaModificacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RE_UsuarioCreacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RE_UsuarioCreacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RE_UsuarioModificacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RE_UsuarioModificacion)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

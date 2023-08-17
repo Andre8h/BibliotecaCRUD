@@ -1,0 +1,114 @@
+﻿@model EJERCICIOMVC.Models.PrestamoUsuario
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PrestamoUsuario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PU_CodigoUsuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PU_CodigoUsuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PU_NombreEjemplar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PU_NombreEjemplar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PU_CodigoEjemplar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PU_CodigoEjemplar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PU_FechaExtraccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PU_FechaExtraccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PU_FechaDevolucion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PU_FechaDevolucion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PU_PrestamoActual)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PU_PrestamoActual)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PU_EstadoDevolucion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PU_EstadoDevolucion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PU_FechaCreacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PU_FechaCreacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PU_FechaModificacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PU_FechaModificacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PU_UsuarioCreacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PU_UsuarioCreacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PU_UsuarioModificacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PU_UsuarioModificacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PU_Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PU_Estado)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

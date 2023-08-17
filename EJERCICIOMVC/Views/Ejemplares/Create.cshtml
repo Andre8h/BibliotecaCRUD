@@ -1,0 +1,76 @@
+﻿@model EJERCICIOMVC.Models.Ejemplar
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Ejemplar</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.EJ_NombreLibro, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.EJ_NombreLibro, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.EJ_NombreLibro, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.EJ_CodigoEjemplar, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.EJ_CodigoEjemplar, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.EJ_CodigoEjemplar, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.EJ_CodigoLibro, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(Model => Model.EJ_CodigoLibro, new List<SelectListItem>(), new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.EJ_CodigoLibro, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.EJ_TipoEjemplar, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(Model => Model.EJ_TipoEjemplar, new List<SelectListItem> { new SelectListItem { Text = "Interno", Value = "Interno" }, new SelectListItem { Text = "Externo", Value = "Externo" } })
+                @Html.ValidationMessageFor(model => model.EJ_TipoEjemplar, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Crear" class="btn btn-success" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink(" Regresar", "Index", null, htmlAttributes: new { @class = "btn btn-outline-primary bi bi-arrow-return-left" })
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+        $(document).ready(function () {
+            $('#EJ_CodigoLibro').select2({
+                ajax: {
+                    url: '/LibroMT/Libros',
+                    dataType: 'json'
+                }
+            });
+
+        });
+    </script>
+}

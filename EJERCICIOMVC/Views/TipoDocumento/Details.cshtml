@@ -1,0 +1,52 @@
+﻿@model EJERCICIOMVC.Models.TipoDocumento
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles </h2>
+
+<div>
+    <h4>del Tipo de Documento</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TD_Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TD_Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TD_Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TD_Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TD_Estado)
+        </dt>
+
+        <dd>
+            @if (Model.TD_Estado == 1)
+            {
+                <span>Activo</span>
+            }
+            else
+            {
+                <span>Inactivo</span>
+            }
+        </dd>
+
+ 
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink(" Edit", "Edit", new { id = Model.id }, htmlAttributes: new { @class = "bi bi-pen-fill btn btn-info" }) |
+    @Html.ActionLink(" Regresar", "Index", null, htmlAttributes: new { @class = "btn btn-outline-primary bi bi-arrow-return-left" })
+
+</p>

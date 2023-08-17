@@ -1,0 +1,88 @@
+﻿@model EJERCICIOMVC.Models.Ejemplar
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles del</h2>
+
+<div>
+    <h4>Ejemplar</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EJ_NombreLibro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EJ_NombreLibro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EJ_CodigoEjemplar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EJ_CodigoEjemplar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EJ_CodigoLibro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EJ_CodigoLibro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EJ_Estado)
+        </dt>
+
+        <dd>
+            @if (Model.EJ_Estado == 0)
+            {
+                <span>LIBRE PERO INACTIVO</span>
+            }
+            else if (Model.EJ_Estado == 1)
+            {
+                <span>LIBRE </span>
+            }
+            else if (Model.EJ_Estado == 2)
+            {
+                <span>EN PRESTAMO</span>
+            }
+            else if (Model.EJ_Estado == 3)
+            {
+                <span>EN REPARACION</span>
+            }
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EJ_TipoEjemplar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EJ_TipoEjemplar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EJ_EstadoSistema)
+        </dt>
+
+        <dd>
+            @if (Model.EJ_EstadoSistema == false)
+            {
+                <span>INACTIVO</span>
+            }
+            else if (Model.EJ_EstadoSistema == true)
+            {
+                <span>ACTIVO</span>
+            }
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink(" Edit", "Edit", new { id = Model.Id }, htmlAttributes: new { @class = "bi bi-pen-fill btn btn-info" }) |
+    @Html.ActionLink(" Regresar", "Index", null, htmlAttributes: new { @class = "btn btn-outline-primary bi bi-arrow-return-left" })
+</p>

@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bibliosafeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Autor">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AU_TipoIdentificador" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="AU_Identificacion" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="AU_Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="AU_FechaCreacion" Type="datetime" Nullable="false" />
+    <Property Name="AU_FechaModificacion" Type="datetime" />
+    <Property Name="AU_UsuarioCreacion" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="AU_UsuarioModificacion" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="AU_Estado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Ejemplar">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EJ_NombreLibro" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="EJ_CodigoEjemplar" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="EJ_CodigoLibro" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="EJ_Estado" Type="int" Nullable="false" />
+    <Property Name="EJ_FechaCreacion" Type="datetime" Nullable="false" />
+    <Property Name="EJ_FechaModificacion" Type="datetime" />
+    <Property Name="EJ_UsuarioCreacion" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="EJ_UsuarioModificacion" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="EJ_TipoEjemplar" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="EJ_EstadoSistema" Type="bit" />
+  </EntityType>
+  <EntityType Name="Libro">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LI_Codigo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LI_Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LI_Autor" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LI_Estado" Type="int" Nullable="false" />
+    <Property Name="LI_FechaCreacion" Type="datetime" Nullable="false" />
+    <Property Name="LI_RE_FechaModificacion" Type="datetime" Nullable="false" />
+    <Property Name="LI_RE_UsuarioCreacion" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LI_RE_UsuarioModificacion" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PrestamoUsuario">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PU_CodigoUsuario" Type="varchar" MaxLength="50" />
+    <Property Name="PU_NombreEjemplar" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PU_CodigoEjemplar" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PU_FechaExtraccion" Type="datetime" Nullable="false" />
+    <Property Name="PU_FechaDevolucion" Type="datetime" />
+    <Property Name="PU_PrestamoActual" Type="int" Nullable="false" />
+    <Property Name="PU_EstadoDevolucion" Type="varchar" MaxLength="50" />
+    <Property Name="PU_FechaCreacion" Type="datetime" Nullable="false" />
+    <Property Name="PU_FechaModificacion" Type="datetime" Nullable="false" />
+    <Property Name="PU_UsuarioCreacion" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PU_UsuarioModificacion" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PU_Estado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Reparacion">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RE_EjemplarCodigo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="RE_EstadoInicial" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="RE_InicioReparacion" Type="datetime" Nullable="false" />
+    <Property Name="RE_FinalizacionReparacion" Type="datetime" />
+    <Property Name="RE_EstadoActualFisico" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="RE_Estado" Type="int" Nullable="false" />
+    <Property Name="RE_FechaReIncorporacion" Type="datetime" />
+    <Property Name="RE_FechaCreacion" Type="datetime" Nullable="false" />
+    <Property Name="RE_FechaModificacion" Type="datetime" />
+    <Property Name="RE_UsuarioCreacion" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="RE_UsuarioModificacion" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoDocumento">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TD_Codigo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TD_Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TD_Estado" Type="int" Nullable="false" />
+    <Property Name="TD_FechaCreacion" Type="datetime" Nullable="false" />
+    <Property Name="TD_FechaModificacion" Type="datetime" Nullable="false" />
+    <Property Name="TD_UsuarioModificacion" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TD_UsuarioCreacion" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="US_Codigo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="US_Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="US_Password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="US_Estado" Type="int" Nullable="false" />
+    <Property Name="US_FechaCreacion" Type="datetime" Nullable="false" />
+    <Property Name="US_FechaModificacion" Type="datetime" Nullable="false" />
+    <Property Name="US_UsuarioCreacion" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="US_UsuarioModificacion" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="US_Email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="US_Tipodedocumento" Type="varchar" MaxLength="50" />
+    <Property Name="US_Documento" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'bibliosafe.dbo.INVENTARIO' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="INVENTARIO">
+    <Key>
+      <PropertyRef Name="Libro" />
+      <PropertyRef Name="NombreLibro" />
+      <PropertyRef Name="Ejemplareslibres" />
+      <PropertyRef Name="EjemplaresPrestados" />
+      <PropertyRef Name="EjemplaresReparacion" />
+    </Key>
+    <Property Name="Libro" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="NombreLibro" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="NumEjemplar" Type="int" />
+    <Property Name="Ejemplareslibres" Type="varchar" MaxLength="19" Nullable="false" />
+    <Property Name="EjemplaresPrestados" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="EjemplaresReparacion" Type="varchar" MaxLength="13" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'bibliosafe.dbo.Libros_Por_Autor' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="Libros_Por_Autor">
+    <Key>
+      <PropertyRef Name="AU_Nombre" />
+      <PropertyRef Name="CodigoAutor" />
+    </Key>
+    <Property Name="AU_Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CodigoAutor" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="NLibros" Type="int" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'bibliosafe.dbo.SUMATORIATIEMPOS' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="SUMATORIATIEMPOS">
+    <Key>
+      <PropertyRef Name="CODIGO" />
+      <PropertyRef Name="NOMBRE" />
+    </Key>
+    <Property Name="CODIGO" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Dias_Prestamos" Type="int" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6035: La relación 'FK_Ejemplar_Libro' tiene columnas que no forman parte de la clave de la tabla en el lado principal de la relación. Se excluyó la relación.
+        <Association Name="FK_Ejemplar_Libro" />-->
+  <!--Errores durante la generación:
+advertencia 6035: La relación 'FK_Ejemplar_Usuario' tiene columnas que no forman parte de la clave de la tabla en el lado principal de la relación. Se excluyó la relación.
+        <Association Name="FK_Ejemplar_Usuario" />-->
+  <!--Errores durante la generación:
+advertencia 6035: La relación 'FK_Libro_Autor' tiene columnas que no forman parte de la clave de la tabla en el lado principal de la relación. Se excluyó la relación.
+        <Association Name="FK_Libro_Autor" />-->
+  <!--Errores durante la generación:
+advertencia 6035: La relación 'FK_Libro_Usuario' tiene columnas que no forman parte de la clave de la tabla en el lado principal de la relación. Se excluyó la relación.
+        <Association Name="FK_Libro_Usuario" />-->
+  <!--Errores durante la generación:
+advertencia 6035: La relación 'FK_Libro_Usuario1' tiene columnas que no forman parte de la clave de la tabla en el lado principal de la relación. Se excluyó la relación.
+        <Association Name="FK_Libro_Usuario1" />-->
+  <!--Errores durante la generación:
+advertencia 6035: La relación 'FK_PrestamoUsuario_Ejemplar' tiene columnas que no forman parte de la clave de la tabla en el lado principal de la relación. Se excluyó la relación.
+        <Association Name="FK_PrestamoUsuario_Ejemplar" />-->
+  <!--Errores durante la generación:
+advertencia 6035: La relación 'FK_Reparacion_Ejemplar' tiene columnas que no forman parte de la clave de la tabla en el lado principal de la relación. Se excluyó la relación.
+        <Association Name="FK_Reparacion_Ejemplar" />-->
+  <!--Errores durante la generación:
+advertencia 6035: La relación 'FK_Usuario_TipoDocumento' tiene columnas que no forman parte de la clave de la tabla en el lado principal de la relación. Se excluyó la relación.
+        <Association Name="FK_Usuario_TipoDocumento" />-->
+  <Function Name="EJEMPLARESINTERVALO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="STARTTIME" Type="date" Mode="In" />
+    <Parameter Name="FINISHTIME" Type="date" Mode="In" />
+  </Function>
+  <Function Name="LIBROSPORUSUARIO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="STARTTIME" Type="date" Mode="In" />
+    <Parameter Name="FINISHTIME" Type="date" Mode="In" />
+  </Function>
+  <EntityContainer Name="bibliosafeModelStoreContainer">
+    <EntitySet Name="Autor" EntityType="Self.Autor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ejemplar" EntityType="Self.Ejemplar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Libro" EntityType="Self.Libro" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PrestamoUsuario" EntityType="Self.PrestamoUsuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Reparacion" EntityType="Self.Reparacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoDocumento" EntityType="Self.TipoDocumento" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="INVENTARIO" EntityType="Self.INVENTARIO" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [INVENTARIO].[Libro] AS [Libro], 
+    [INVENTARIO].[NombreLibro] AS [NombreLibro], 
+    [INVENTARIO].[NumEjemplar] AS [NumEjemplar], 
+    [INVENTARIO].[Ejemplareslibres] AS [Ejemplareslibres], 
+    [INVENTARIO].[EjemplaresPrestados] AS [EjemplaresPrestados], 
+    [INVENTARIO].[EjemplaresReparacion] AS [EjemplaresReparacion]
+    FROM [dbo].[INVENTARIO] AS [INVENTARIO]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Libros_Por_Autor" EntityType="Self.Libros_Por_Autor" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Libros_Por_Autor].[AU_Nombre] AS [AU_Nombre], 
+    [Libros_Por_Autor].[CodigoAutor] AS [CodigoAutor], 
+    [Libros_Por_Autor].[NLibros] AS [NLibros]
+    FROM [dbo].[Libros_Por_Autor] AS [Libros_Por_Autor]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="SUMATORIATIEMPOS" EntityType="Self.SUMATORIATIEMPOS" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [SUMATORIATIEMPOS].[CODIGO] AS [CODIGO], 
+    [SUMATORIATIEMPOS].[NOMBRE] AS [NOMBRE], 
+    [SUMATORIATIEMPOS].[Dias_Prestamos] AS [Dias_Prestamos]
+    FROM [dbo].[SUMATORIATIEMPOS] AS [SUMATORIATIEMPOS]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

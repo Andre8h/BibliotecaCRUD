@@ -1,0 +1,59 @@
+﻿@model EJERCICIOMVC.Models.Libro
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Del libro</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LI_Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LI_Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LI_Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LI_Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LI_Autor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LI_Autor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LI_Estado)
+        </dt>
+
+        <dd>
+            @if(Model.LI_Estado == 1)
+            {
+                <span>ACTIVO</span>
+            }
+            else if(Model.LI_Estado == 0)
+            {
+                <span>INACTIVO</span>
+            }
+           
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink(" Edit", "Edit", new { id = Model.id }, htmlAttributes: new { @class = "bi bi-pen-fill btn btn-info" }) |
+    @Html.ActionLink(" Regresar", "Index", null, htmlAttributes: new { @class = "btn btn-outline-primary bi bi-arrow-return-left" })
+
+</p>

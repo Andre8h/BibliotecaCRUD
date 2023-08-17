@@ -1,0 +1,58 @@
+﻿@model EJERCICIOMVC.Models.TipoDocumento
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Desea Eliminar </h2>
+
+<div>
+    <h4>Este Tipo de documento ?</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TD_Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TD_Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TD_Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TD_Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TD_Estado)
+        </dt>
+
+        <dd>
+            @if (Model.TD_Estado == 1)
+            {
+                <span>Activo</span>
+            }
+            else
+            {
+                <span>Inactivo</span>
+            }
+        </dd>
+
+
+
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+<div class="form-actions no-color">
+    <input type="submit" value="Borrar" class="btn btn-danger" /> |
+    @Html.ActionLink(" Regresar", "Index", null, htmlAttributes: new { @class = "btn btn-outline-primary bi bi-arrow-return-left" })
+
+</div>
+    }
+</div>

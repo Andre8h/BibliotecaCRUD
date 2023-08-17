@@ -1,0 +1,87 @@
+﻿@model EJERCICIOMVC.Models.Ejemplar
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Ejemplar</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.EJ_NombreLibro, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.EJ_NombreLibro, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.EJ_NombreLibro, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.EJ_CodigoEjemplar, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.EJ_CodigoEjemplar, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.EJ_CodigoEjemplar, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.EJ_CodigoLibro, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.EJ_CodigoLibro, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.EJ_CodigoLibro, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.EJ_Estado, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.EJ_Estado, new List<SelectListItem> { new SelectListItem() { Text = "LIBRE PERO INACTIVO", Value = "0" }, new SelectListItem() { Text = "LIBRE", Value = "1" }, new SelectListItem() { Text = "EN PRESTAMO", Value = "2" }, new SelectListItem() { Text = "EN REPARACION", Value = "3" } },
+                new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.EJ_Estado, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+    
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.EJ_TipoEjemplar, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.EJ_TipoEjemplar, new List<SelectListItem> { new SelectListItem() { Text = "Interno", Value = "Interno" }, new SelectListItem() { Text = "Externo", Value = "Externo" } }, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.EJ_TipoEjemplar, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.EJ_EstadoSistema, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.DropDownListFor(model => model.EJ_Estado, new List<SelectListItem> { new SelectListItem() { Text = "Activo", Value = "1" }, new SelectListItem() { Text = "Inactivo", Value = "0" } }, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.EJ_EstadoSistema, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Guardar" class="btn btn-success" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink(" Regresar", "Index", null, htmlAttributes: new { @class = "btn btn-outline-primary bi bi-arrow-return-left" })
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

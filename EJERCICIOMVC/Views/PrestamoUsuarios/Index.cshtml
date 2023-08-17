@@ -1,0 +1,500 @@
+﻿@model IEnumerable<EJERCICIOMVC.Models.PrestamoUsuario>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<table id="mytable" class="table display responsive nowrap" style="width:100%">
+    <thead>
+        <tr>
+            <th>Codigo Usuario</th>
+            <th>Nombre Ejemplar</th>
+            <th>Codigo Ejemplar</th>
+            <th>Fecha Extraccion</th>
+            <th>Fecha Devolucion</th>
+            <th>En Prestamo</th>
+            <th>Estado devolucion</th>
+            <th>Estado</th>
+
+            <th></th>
+        </tr>
+    </thead>
+
+</table>
+
+<!-- Modal -->
+<div class="modal fade" id="FormModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Ejemplar</h5>
+            </div>
+            <div class="modal-body" id="Modalbody">
+                <div class="row">
+                    <div class="col-sm-12">
+
+
+                        <input type="text" id="txtId" readonly />
+                        <div class="form-group">
+                            <label for="txtCodUS">Codigo Usuario:</label>
+                            <select style="width:200px " class="form-control" id="txtCodUS"></select>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="txtNombreEJ">Nombre Ejemplar:</label>
+                            <select style="width:200px " class="form-control" id="txtNombreEJ"></select>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtCodEJ">Codigo Ejemplar:</label>
+                            <select style="width:200px " class="form-control" id="txtCodEJ"></select>
+                        </div>
+                        <div class="form-group">
+                            <label for="FechaExtraccion1">Fecha Extraccion:</label>
+                            <input id="FechaExtraccion" type="date" style="width: 200px">
+                        </div>
+                        <div class="form-group">
+                            <label for="FechaDevolucion">Fecha Devolucion:</label>
+                            <input id="FechaDevolucion" type="date" style="width: 200px">
+                        </div>
+                        <div class="form-group">
+                            <label for="txtPrestamoActual">Prestado Actualmente:</label>
+                            <select class="js-example-basic-single" name="state" id="txtPrestaActual">
+                                <option value="1">SI</option>
+                                <option value="0">NO</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtEstadoDevolucion">Estado devolucion:</label>
+                            <input type="text" class="form-control" id="txtEstadoDevolucion">
+                        </div>
+
+                        <div class="form-group" id="EstadoElemento">
+                            <label for="txtEstado">Estado en Sistema:</label>
+                            <select class="js-example-basic-single" name="state" id="txtEstado">
+                                <option value="1">Activo</option>
+                                <option value="0">Inactivo</option>
+                            </select>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" onclick="Cerrar()">Cerrar</button>
+                <button type="button" class="btn btn-primary" onclick="Guardar()">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal PARAMETROS INFORME Ejemplares-->
+<div class="modal fade" id="ModalDate" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">ingrese fechas</h5>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+
+                    <div id="datetimepicker1" class="input-append date col-sm-6">
+                        <input id="date" type="date" style="width: 200px">
+                    </div>
+
+
+                    <div id="datetimepicker2" class="input-append date col-sm-6">
+                        <input id="date1" type="date" style="width: 200px">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" onclick="CerrarFechas()">Cerrar</button>
+                <button type="button" class="btn btn-primary" onclick="PDFejemplares()">Generar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal PARAMETROS INFORME Usuarios-->
+<div class="modal fade" id="ModalDateUsuarios" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">ingrese fechas</h5>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+
+                    <div id="datetimepicker1" class="input-append date col-sm-6">
+                        <input id="dateU" type="date" style="width: 200px">
+                    </div>
+
+
+                    <div id="datetimepicker2" class="input-append date col-sm-6">
+                        <input id="dateU1" type="date" style="width: 200px">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" onclick="CerrarFechasUS()">Cerrar</button>
+                <button type="button" class="btn btn-primary" onclick="PDFUsuarios()">Generar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Reportes -->
+<div class="modal fade" id="ModalReporte" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Reporte</h5>
+            </div>
+            <div class="modal-body">
+                <iframe id="reporte" style="width:100%; height:400px;display:none;"></iframe>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" onclick="CerrarFechas()">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+
+
+            $('#txtCodUS').select2({
+                ajax: {
+                    url: '/UsuariosBI/CallAjax',
+                    dataType: 'json'
+                },
+                dropdownParent: $('#Modalbody')
+            });
+
+        });
+
+        $(document).ready(function () {
+
+            $('#txtNombreEJ').select2({
+                ajax: {
+                    url: '/Ejemplares/CallAjax2',
+                    dataType: 'json'
+                },
+                dropdownParent: $('#Modalbody')
+            });
+
+        });
+
+        $(document).ready(function () {
+
+            $('#txtCodEJ').select2({
+                ajax: {
+                    url: '/Ejemplares/CallAjax',
+                    dataType: 'json'
+                },
+                dropdownParent: $('#Modalbody')
+            });
+
+        });
+
+
+
+       var tabla_persona;
+        $(document).ready(function () {
+            tabla_persona = $('#mytable').DataTable({
+
+
+                "ajax": {
+                    "url": "@Url.Action("Lista", "PrestamoUsuarios")",
+                    "type": "GET",
+                    "datatype": "json"
+                },
+                "columns": [
+                    { "data": "PU_CodigoUsuario" },
+                    { "data": "PU_NombreEjemplar" },
+                    { "data": "PU_CodigoEjemplar"},
+                    {
+                        "data": "PU_FechaExtraccion",
+                        "render": DataTable.render.datetime('Do MMM YYYY'),
+                    },
+                    {
+                        "data": "PU_FechaDevolucion",
+                        "render": DataTable.render.datetime('Do MMM YYYY'),
+                    },
+                    {
+                        "data": "PU_PrestamoActual",
+                        "render": function (data, type, row) {
+                            if (data == 0) {
+                                return 'NO'
+                            }
+                            else if (data == 1) {
+                                return 'SI'
+                            }
+                        }
+                    },
+                    { "data": "PU_EstadoDevolucion" },
+                    {
+                        "data": "PU_Estado",
+                        "render": function (data, type, row) {
+                            if (data == 0) {
+                                return 'Inactivo'
+                            }
+                            else if (data == 1) {
+                                return 'Activo'
+                            }
+                        }
+                    },
+                    {
+                        "data": "id", "render": function (data) {
+
+                            return "<button class='btn btn-primary btn-sm' type='button' onclick='abrirModal(" + data + ")'><i class='fas fa-pen'></i></button>" +
+                                "<button class='btn btn-danger btn-sm ml-2' type='button' onclick='Eliminar(" + data + ")'><i class='fa fa-trash'></i></button>"
+                        },
+                        "orderable": false,
+                        "searchable": false,
+                        "width": "150px"
+                    }
+                ],
+                dom: 'Bfrtip',
+                buttons: [
+                    {
+                        text: 'Agregar Nuevo',
+                        attr: { class: 'btn btn-success btn-sm' },
+                        action: function (e, dt, node, config) {
+                            abrirModal()
+                        },
+
+                    },
+                    {
+                        text: 'Inventario',
+                        attr: { class: 'btn btn-outline-danger fa-solid fa-cubes-stacked', onclick: 'PDFInventario()' },
+                        action: function (e, dt, node, config) {
+                        }
+                    },
+                    {
+                        text: 'Autor',
+                        attr: { class: 'btn btn-outline-danger fa-solid fa-person ', onclick: 'PDFAutor()' },
+                        action: function (e, dt, node, config) {
+                        }
+                    },
+                    {
+                        text: 'Sumatorias',
+                        attr: { class: 'btn btn-outline-danger fa-solid fa-calendar-days', onclick: 'PDFPrestamos()' },
+                        action: function (e, dt, node, config) {
+                        }
+                    },
+                    {
+                        text: 'fechas',
+                        attr: { class: 'btn btn-outline-danger', onclick: 'abrirFechas()' },
+                        action: function (e, dt, node, config) {
+                        }
+                    },
+                    {
+                        text: 'Libros Por usuario',
+                        attr: { class: 'btn btn-outline-danger', onclick: 'abrirFechasUS()' },
+                        action: function (e, dt, node, config) {
+                        }
+                    }
+                ],
+
+
+            })
+
+        });
+
+         function abrirFechas() {
+            $('#ModalDate').modal('show');
+            $('#ModalDate').off('hidden.bs.modal').on('hidden.bs.modal', function () {
+            });
+        };
+
+        function CerrarFechas() {
+            $('#ModalDate').modal('hide');
+            $('#ModalReporte').modal('hide');
+        };
+        function abrirFechasUS() {
+            $('#ModalDateUsuarios').modal('show');
+            $('#ModalDateUsuarios').off('hidden.bs.modal').on('hidden.bs.modal', function () {
+            });
+        };
+
+        function CerrarFechasUS() {
+            $('#ModalDateUsuarios').modal('hide');
+            $('#ModalReporte').modal('hide');
+        };
+         function PDFUsuarios() {
+            var $data = {
+                Docum: {
+                    id: 'PDF',
+                    date1: $('#dateU').val(),
+                    date2: $('#dateU1').val(),
+                }
+            };
+             console.log($data);
+            //jQuery.ajax({
+            //    url: "@Url.Action("LibrosUsuarios", "CreadorPDF")",
+            //    type: "GET",
+             //   data: JSON.stringify($data),
+            //    dataType: "json",
+            //   contentType: "application/json; charset=utf-8",
+            // });
+             const url = "/CreadorPDF/LibrosUsuarios/PDF?date1=" + $data.Docum.date1 + "&date2=" +$data.Docum.date2;
+            $("#reporte").attr("src", url).show();
+            $('#ModalDate').modal('hide');
+            $('#ModalReporte').modal('show');
+        };
+
+        function PDFejemplares() {
+            var $data = {
+                Docum: {
+                    id: 'PDF',
+                    date1: $('#date').val(),
+                    date2: $('#date1').val(),
+                }
+            };
+
+            //jQuery.ajax({
+            //    url: "@Url.Action("ReporteEjemplares", "CreadorPDF")",
+            //    type: "GET",
+             //   data: JSON.stringify($data),
+            //    dataType: "json",
+            //   contentType: "application/json; charset=utf-8",
+            // });
+            const url = "/CreadorPDF/ReporteEjemplares/PDF?date1=" + $data.Docum.date1 + "&date2=" +$data.Docum.date2;
+            $("#reporte").attr("src", url).show();
+            $('#ModalDate').modal('hide');
+            $('#ModalReporte').modal('show');
+        };
+
+        function PDFInventario() {
+            /* window.location.href = "/CreadorPDF/ReporteInventario/PDF";*/
+            const url = "/CreadorPDF/ReporteInventario/PDF";
+            $("#reporte").attr("src", url).show();
+            $('#ModalDate').modal('hide');
+            $('#ModalReporte').modal('show');
+        };
+        function PDFAutor() {
+            /*            window.location.href = "/CreadorPDF/ReporteAutores/PDF";*/
+            const url = "/CreadorPDF/ReporteAutores/PDF";
+            $("#reporte").attr("src", url).show();
+            $('#ModalDate').modal('hide');
+            $('#ModalReporte').modal('show');
+        };
+        function PDFPrestamos() {
+            /*window.location.href = "/CreadorPDF/ReporteSumatorias/PDF";*/
+            const url = "/CreadorPDF/ReporteSumatorias/PDF";
+            $("#reporte").attr("src", url).show();
+            $('#ModalDate').modal('hide');
+            $('#ModalReporte').modal('show');
+        };
+
+        function Cerrar() {
+           $('#FormModal').modal('hide');
+        };
+
+        function abrirModal($id) {
+            $("#txtId").val($id);
+            if ($id != null) {
+                jQuery.ajax({
+                    url: "@Url.Action("Obtener", "PrestamoUsuarios")" + "?id=" + $id,
+                    type: "GET",
+                    dataType: "json",
+                    contentType: "application/json; charset=utf-8",
+                    success: function (data) {
+
+                        if (data != null) {
+                            $("#txtCodUS").val(data.PU_CodigoUsuario);
+                            $("#txtNombreEJ").val(data.PU_NombreEjemplar);
+                            $("#txtCodEJ").val(data.PU_CodigoEjemplar);
+                            $("#FechaExtraccion").val(data.PU_FechaExtraccion);
+                            $("#FechaDevolucion").val(data.PU_FechaDevolucion);
+                            $("#txtPrestaActual").val(data.PU_PrestamoActual);
+                            $("#txtEstadoDevolucion").val(data.PU_EstadoDevolucion);
+                            $("#txtEstado").val(data.PU_Estado);
+                        }
+                    }
+                });
+                $("#EstadoElemento").show()
+            } else {
+
+                $("#txtCodUS").val("");
+                $("#txtNombreEJ").val("");
+                $("#txtCodEJ").val("");
+                $("#FechaExtraccion").val("");
+                $("#FechaDevolucion").val("");
+                $("#txtPrestaActual").val("");
+                $("#txtEstadoDevolucion").val("");
+                $("#txtEstado").hide();
+                $("#EstadoElemento").hide()
+            }
+            $('#FormModal').modal('show');
+        };
+
+
+        function Guardar() {
+            var $data = {
+                Docum: {
+                    id: $("#txtId").val(),
+                    PU_CodigoUsuario: $("#txtCodUS").val(),
+                    PU_NombreEjemplar: $("#txtNombreEJ").val(),
+                    PU_CodigoEjemplar : $("#txtCodEJ").val(),
+                    PU_FechaExtraccion: $("#FechaExtraccion").val(),
+                    PU_FechaDevolucion: $("#FechaDevolucion").val(),
+                    PU_PrestamoActual: $("#txtPrestaActual").val(),
+                    PU_EstadoDevolucion : $("#txtEstadoDevolucion").val(),
+                    PU_Estado: $("#txtEstado").val(),
+                }
+            };
+
+
+            jQuery.ajax({
+                url: "@Url.Action("Guardar", "PrestamoUsuarios")",
+                type: "POST",
+                data: JSON.stringify($data),
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+
+                    if (data.resultado) {
+                        tabla_persona.ajax.reload();
+                        $('#FormModal').modal('hide');
+                    } else {
+                        alert("No se pudo guardar los cambios");
+                    }
+                },
+                error: function (error) {
+                    console.log(error)
+                },
+                beforeSend: function () {
+                }
+            });
+        }
+
+        function Eliminar($id) {
+            if (confirm("¿Realmente desea eliminar?")) {
+                jQuery.ajax({
+                    url: "@Url.Action("Eliminar", "PrestamoUsuarios")" + "?id=" + $id,
+                    type: "GET",
+                    dataType: "json",
+                    contentType: "application/json; charset=utf-8",
+                    success: function (data) {
+                        if (data.resultado) {
+                            tabla_persona.ajax.reload();
+                        }
+                    }
+                });
+            }
+        }
+    </script>
+
+}

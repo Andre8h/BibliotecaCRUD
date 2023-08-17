@@ -1,0 +1,106 @@
+﻿@model EJERCICIOMVC.Models.Reparacion
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Reparacion</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RE_EjemplarCodigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RE_EjemplarCodigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RE_EstadoInicial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RE_EstadoInicial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RE_InicioReparacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RE_InicioReparacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RE_FinalizacionReparacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RE_FinalizacionReparacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RE_EstadoActualFisico)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RE_EstadoActualFisico)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RE_Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RE_Estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RE_FechaReIncorporacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RE_FechaReIncorporacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RE_FechaCreacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RE_FechaCreacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RE_FechaModificacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RE_FechaModificacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RE_UsuarioCreacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RE_UsuarioCreacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RE_UsuarioModificacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RE_UsuarioModificacion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

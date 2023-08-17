@@ -1,0 +1,58 @@
+﻿@model EJERCICIOMVC.Models.Autor
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>del Autor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AU_TipoIdentificador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AU_TipoIdentificador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AU_Identificacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AU_Identificacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AU_Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AU_Nombre)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AU_Estado)
+        </dt>
+
+        <dd>
+            @if(Model.AU_Estado == 1)
+            {
+                <span>ACTIVO</span>
+            }
+            else if(Model.AU_Estado == 0)
+            {
+                <span>INACTIVO</span>
+            }
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink(" Edit", "Edit", new { id = Model.id }, htmlAttributes: new { @class = "bi bi-pen-fill btn btn-info" }) |
+    @Html.ActionLink(" Regresar", "Index", null, htmlAttributes: new { @class = "btn btn-outline-primary bi bi-arrow-return-left" })
+</p>

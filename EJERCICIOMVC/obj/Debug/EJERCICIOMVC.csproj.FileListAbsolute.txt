@@ -1,0 +1,189 @@
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\EJERCICIOMVC.dll.config
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\EJERCICIOMVC.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\EJERCICIOMVC.pdb
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\csc.exe
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\csc.exe.config
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\csc.rsp
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\csi.exe
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\csi.exe.config
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\csi.rsp
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\System.AppContext.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\System.Console.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\System.IO.Compression.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\System.Net.Http.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\System.Net.Sockets.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\System.ValueTuple.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\System.Xml.XPath.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\vbc.exe
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\vbc.exe.config
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\vbc.rsp
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\VBCSCompiler.exe
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\Antlr3.Runtime.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\EntityFramework.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\EntityFramework.SqlServer.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\Newtonsoft.Json.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\System.Web.Helpers.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\System.Web.Mvc.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\System.Web.Optimization.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\System.Web.Razor.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\System.Web.WebPages.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\System.Web.WebPages.Razor.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\WebGrease.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\EntityFramework.xml
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\EntityFramework.SqlServer.xml
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\System.Web.Helpers.xml
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\System.Web.Mvc.xml
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\System.Web.Optimization.xml
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\System.Web.Razor.xml
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\System.Web.WebPages.xml
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\System.Web.WebPages.Razor.xml
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\Newtonsoft.Json.xml
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\Antlr3.Runtime.pdb
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\es\System.Web.Helpers.resources.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\es\System.Web.Mvc.resources.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\es\System.Web.Optimization.resources.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\es\System.Web.Razor.resources.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\es\System.Web.WebPages.resources.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\obj\Debug\EJERCICIOMVC.csproj.AssemblyReference.cache
+C:\Users\ACER\source\repos\EJERCICIOMVC\obj\Debug\EJERCICIOMVC.csproj.CoreCompileInputs.cache
+C:\Users\ACER\source\repos\EJERCICIOMVC\obj\Debug\EJERCICIOMVC.csproj.CopyComplete
+C:\Users\ACER\source\repos\EJERCICIOMVC\obj\Debug\EJERCICIOMVC.dll
+C:\Users\ACER\source\repos\EJERCICIOMVC\obj\Debug\EJERCICIOMVC.pdb
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\EJERCICIOMVC.dll.config
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\EJERCICIOMVC.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\EJERCICIOMVC.pdb
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\csc.exe
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\csc.exe.config
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\csc.rsp
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\csi.exe
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\csi.exe.config
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\csi.rsp
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\System.AppContext.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\System.Console.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\System.IO.Compression.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\System.Net.Http.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\System.Net.Sockets.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\System.ValueTuple.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\System.Xml.XPath.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\vbc.exe
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\vbc.exe.config
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\vbc.rsp
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\VBCSCompiler.exe
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\Antlr3.Runtime.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\EntityFramework.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\EntityFramework.SqlServer.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\Newtonsoft.Json.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\System.Web.Helpers.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\System.Web.Mvc.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\System.Web.Optimization.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\System.Web.Razor.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\System.Web.WebPages.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\System.Web.WebPages.Razor.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\WebGrease.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\EntityFramework.xml
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\EntityFramework.SqlServer.xml
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\System.Web.Helpers.xml
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\System.Web.Mvc.xml
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\System.Web.Optimization.xml
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\System.Web.Razor.xml
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\System.Web.WebPages.xml
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\System.Web.WebPages.Razor.xml
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\Newtonsoft.Json.xml
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\Antlr3.Runtime.pdb
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\es\System.Web.Helpers.resources.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\es\System.Web.Mvc.resources.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\es\System.Web.Optimization.resources.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\es\System.Web.Razor.resources.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\es\System.Web.WebPages.resources.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\obj\Debug\EJERCICIOMVC.csproj.AssemblyReference.cache
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\obj\Debug\EJERCICIOMVC.csproj.CoreCompileInputs.cache
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\obj\Debug\EJERCICIOMVC.csproj.CopyComplete
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\obj\Debug\EJERCICIOMVC.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\obj\Debug\EJERCICIOMVC.pdb
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\SqlServerTypes\x64\msvcr120.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\SqlServerTypes\x86\msvcr120.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\Microsoft.ReportViewer.Common.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\Microsoft.ReportViewer.WebForms.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\Microsoft.SqlServer.Types.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\ACER\Desktop\Copia de seguridad\EJERCICIOMVC\bin\Microsoft.ReportViewer.DataVisualization.dll

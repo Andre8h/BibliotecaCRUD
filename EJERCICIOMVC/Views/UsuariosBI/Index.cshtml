@@ -1,0 +1,506 @@
+﻿@model IEnumerable<EJERCICIOMVC.Models.Usuario>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@*<h2>Usuarios</h2>
+
+    <p>
+        @Html.ActionLink("Crear Nuevo Documento", "Create", null, htmlAttributes: new { @class = "btn btn-outline-dark" })
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.US_Codigo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.US_Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.US_Estado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.US_Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.US_Tipodedocumento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.US_Documento)
+            </th>
+            <th></th>
+        </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.US_Codigo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.US_Nombre)
+            </td>
+            <td>
+                @if (item.US_Estado == 1)
+                {
+                    <span>Activo</span>
+                }
+                else
+                {
+                    <span>Inactivo</span>
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.US_Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.US_Tipodedocumento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.US_Documento)
+            </td>
+            <td>
+                @Html.ActionLink(" Editar", "Edit", new { id = item.Id }, htmlAttributes: new { @class = "bi bi-pen-fill btn btn-info" })|
+                @Html.ActionLink(" Detalles", "Details", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-warning bi bi-stack" }) |
+                @Html.ActionLink(" Borrar", "Delete", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-danger bi bi-stack" })
+            </td>
+        </tr>
+    }
+
+    </table>*@
+
+<table id="mytable" class="table display responsive nowrap" style="width:100%">
+    <thead>
+        <tr>
+            <th>Codigo</th>
+            <th>Nombre</th>
+            <th>Estado</th>
+            <th>Correo Electronico</th>
+            <th>Tipo Documento</th>
+            <th>Documento</th>
+            <th></th>
+        </tr>
+    </thead>
+
+</table>
+
+<!-- Modal PARAMETROS INFORME Usuarios-->
+<div class="modal fade" id="ModalDateUsuarios" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">ingrese fechas</h5>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+
+                    <div id="datetimepicker1" class="input-append date col-sm-6">
+                        <input id="date" type="date" style="width: 200px">
+                    </div>
+
+
+                    <div id="datetimepicker2" class="input-append date col-sm-6">
+                        <input id="date1" type="date" style="width: 200px">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" onclick="CerrarFechasUS()">Cerrar</button>
+                <button type="button" class="btn btn-primary" onclick="PDFUsuarios()">Generar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="FormModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Documento</h5>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-12">
+
+
+                        <input type="text" id="txtId" readonly />
+                        <div class="form-group">
+                            <label for="txtNombre">Nombre Usuario:</label>
+                            <input type="text" class="form-control" id="txtNombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="txtCodigo">Codigo Usuario:</label>
+                            <input type="text" class="form-control" id="txtCodigo">
+                        </div>
+                        <div class="form-group">
+                            <label for="txtCorreo">Correo Electronico:</label>
+                            <input type="text" class="form-control" id="txtCorreo">
+                        </div>
+                        <div class="form-group" id="EstadoElemento">
+                            <label for="txtEstado">Estado:</label>
+                            <select class="js-example-basic-single" name="state" id="txtEstado">
+                                <option value="1">Activo</option>
+                                <option value="0">Inactivo</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtTipoDoc">Tipo Documento:</label>
+                            <select style="width:200px " class="form-control" id="txtTipoDoc"></select>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtDoc">Documento:</label>
+                            <input type="text" class="form-control" id="txtDoc">
+                        </div>
+                        <div class="form-group">
+                            <label for="txtCont">Contrasena:</label>
+                            <input type="text" class="form-control" id="txtCont">
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" onclick="Cerrar()">Cerrar</button>
+                <button type="button" class="btn btn-primary" onclick="Guardar()">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal PARAMETROS INFORME Ejemplares-->
+<div class="modal fade" id="ModalDate" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">ingrese fechas</h5>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+
+                    <div id="datetimepicker1" class="input-append date col-sm-6">
+                        <input id="date" type="date" style="width: 200px">
+                    </div>
+
+
+                    <div id="datetimepicker2" class="input-append date col-sm-6">
+                        <input id="date1" type="date" style="width: 200px">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" onclick="CerrarFechas()">Cerrar</button>
+                <button type="button" class="btn btn-primary" onclick="PDFejemplares()">Generar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Reportes -->
+<div class="modal fade" id="ModalReporte" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Reporte</h5>
+            </div>
+            <div class="modal-body">
+                <iframe id="reporte" style="width:100%; height:400px;display:none;"></iframe>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" onclick="CerrarFechas()">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+
+    <script>
+        $(document).ready(function () {
+            $('#txtEstado').select2({
+                dropdownParent: $('#EstadoElemento')
+            });
+        });
+
+        $(document).ready(function () {
+            $('#txtTipoDoc').select2({
+                ajax: {
+                    url: '/TipoDocumento/TDOC',
+                    dataType: 'json'
+                },
+                dropdownParent: $('#FormModal')
+            });
+        });
+        var tabla_persona;
+        $(document).ready(function () {
+
+            tabla_persona = $('#mytable').DataTable({
+
+                "ajax": {
+                    "url": "@Url.Action("Lista", "UsuariosBI")",
+                    "type": "GET",
+                    "datatype": "json"
+                },
+                "columns": [
+                    { "data": "US_Codigo" },
+                    { "data": "US_Nombre" },
+                    {
+                        "data": "US_Estado",
+                        "render": function (data, type, row) {
+                            if (data == 0) {
+                                return 'Inactivo'
+                            }
+                            else if (data == 1) {
+                                return 'Activo'
+                            }
+                        }
+                    },
+                    { "data": "US_Email" },
+                    { "data": "US_Tipodedocumento" },
+                    { "data": "US_Documento" },
+                    {
+                        "data": "Id", "render": function (data) {
+
+                            return "<button class='btn btn-primary btn-sm' type='button' onclick='abrirModal(" + data + ")'><i class='fas fa-pen'></i></button>" +
+                                "<button class='btn btn-danger btn-sm ml-2' type='button' onclick='Eliminar(" + data + ")'><i class='fa fa-trash'></i></button>"
+                        },
+                        "orderable": false,
+                        "searchable": false,
+                        "width": "150px"
+                    }
+                ],
+                dom: 'Bfrtip',
+                buttons: [
+                    {
+                        text: 'Agregar Nuevo',
+                        attr: { class: 'btn btn-success btn-sm' },
+                        action: function (e, dt, node, config) {
+                            abrirModal()
+                        }
+                    },
+                    {
+                        text: 'Inventario',
+                        attr: { class: 'btn btn-outline-danger fa-solid fa-cubes-stacked', onclick: 'PDFInventario()' },
+                        action: function (e, dt, node, config) {
+                        }
+                    },
+                    {
+                        text: 'Autor',
+                        attr: { class: 'btn btn-outline-danger fa-solid fa-person ', onclick: 'PDFAutor()' },
+                        action: function (e, dt, node, config) {
+                        }
+                    },
+                    {
+                        text: 'Sumatorias',
+                        attr: { class: 'btn btn-outline-danger fa-solid fa-calendar-days', onclick: 'PDFPrestamos()' },
+                        action: function (e, dt, node, config) {
+                        }
+                    },
+                    {
+                        text: 'fechas',
+                        attr: { class: 'btn btn-outline-danger', onclick: 'abrirFechas()' },
+                        action: function (e, dt, node, config) {
+                        }
+                    },
+                    {
+                        text: 'Libros Por usuario',
+                        attr: { class: 'btn btn-outline-danger', onclick: 'abrirFechasUS()' },
+                        action: function (e, dt, node, config) {
+                        }
+                    }
+
+                 ],
+
+
+            })
+
+        });
+        function abrirFechas() {
+            $('#ModalDate').modal('show');
+            $('#ModalDate').off('hidden.bs.modal').on('hidden.bs.modal', function () {
+            });
+        };
+
+        function CerrarFechas() {
+            $('#ModalDate').modal('hide');
+            $('#ModalReporte').modal('hide');
+        };
+
+               function abrirFechasUS() {
+            $('#ModalDateUsuarios').modal('show');
+            $('#ModalDateUsuarios').off('hidden.bs.modal').on('hidden.bs.modal', function () {
+            });
+        };
+
+        function CerrarFechasUS() {
+            $('#ModalDateUsuarios').modal('hide');
+            $('#ModalReporte').modal('hide');
+        };
+         function PDFUsuarios() {
+            var $data = {
+                Docum: {
+                    id: 'PDF',
+                    date1: $('#date').val(),
+                    date2: $('#date1').val(),
+                }
+            };
+
+            //jQuery.ajax({
+            //    url: "@Url.Action("LibrosUsuarios", "CreadorPDF")",
+            //    type: "GET",
+             //   data: JSON.stringify($data),
+            //    dataType: "json",
+            //   contentType: "application/json; charset=utf-8",
+            // });
+             const url = "/CreadorPDF/LibrosUsuarios/PDF?date1=" + $data.Docum.date1 + "&date2=" +$data.Docum.date2;
+            $("#reporte").attr("src", url).show();
+            $('#ModalDate').modal('hide');
+            $('#ModalReporte').modal('show');
+        };
+
+        function PDFejemplares() {
+            var $data = {
+                Docum: {
+                    id: 'PDF',
+                    date1: $('#date').val(),
+                    date2: $('#date1').val(),
+                }
+            };
+
+            //jQuery.ajax({
+            //    url: "@Url.Action("ReporteEjemplares", "CreadorPDF")",
+            //    type: "GET",
+             //   data: JSON.stringify($data),
+            //    dataType: "json",
+            //   contentType: "application/json; charset=utf-8",
+            // });
+            const url = "/CreadorPDF/ReporteEjemplares/PDF?date1=" + $data.Docum.date1 + "&date2=" +$data.Docum.date2;
+            $("#reporte").attr("src", url).show();
+            $('#ModalDate').modal('hide');
+            $('#ModalReporte').modal('show');
+        };
+
+
+
+        function PDFInventario() {
+           /* window.location.href = "/CreadorPDF/ReporteInventario/PDF";*/
+            const url = "/CreadorPDF/ReporteInventario/PDF";
+            $("#reporte").attr("src", url).show();
+            $('#ModalDate').modal('hide');
+            $('#ModalReporte').modal('show');
+        };
+        function PDFAutor() {
+/*            window.location.href = "/CreadorPDF/ReporteAutores/PDF";*/
+            const url = "/CreadorPDF/ReporteAutores/PDF";
+            $("#reporte").attr("src", url).show();
+            $('#ModalDate').modal('hide');
+            $('#ModalReporte').modal('show');
+        };
+        function PDFPrestamos() {
+            /*window.location.href = "/CreadorPDF/ReporteSumatorias/PDF";*/
+            const url = "/CreadorPDF/ReporteSumatorias/PDF";
+            $("#reporte").attr("src", url).show();
+            $('#ModalDate').modal('hide');
+            $('#ModalReporte').modal('show');
+        };
+
+        function Cerrar() {
+            $('#FormModal').modal('hide');
+        };
+
+        function abrirModal($Id) {
+            $("#txtId").val($Id);
+            if ($Id != null) {
+                jQuery.ajax({
+                    url: "@Url.Action("Obtener", "UsuariosBI")" + "?id=" + $Id,
+                    type: "GET",
+                    dataType: "json",
+                    contentType: "application/json; charset=utf-8",
+                    success: function (data) {
+
+                        if (data != null) {
+                            $("#txtCodigo").val(data.US_Codigo);
+                            $("#txtNombre").val(data.US_Nombre);
+                            $("#txtDoc").val(data.US_Documento);
+                            $("#txtCorreo").val(data.US_Email);
+                            $("#txtTipoDoc").val(data.US_Tipodedocumento);
+                            $("#txtEstado").val(data.US_Estado);
+                            $("#txtCont").val(data.US_Password);
+                        }
+                    }
+                });
+                $("#EstadoElemento").show()
+            } else {
+                $("#txtCodigo").val("");
+                $("#txtNombre").val("");
+                $("#txtDoc").val("");
+                $("#txtCorreo").val("");
+                $("#txtTipoDoc").val("");
+                $("#txtEstado").val("");
+                $("#txtCont").val("");
+                $("#EstadoElemento").hide()
+            }
+            $('#FormModal').modal('show');
+        };
+
+        function Guardar() {
+            var $data = {
+                Docum: {
+                    Id: $("#txtId").val(),
+                    US_Codigo: $("#txtCodigo").val(),
+                    US_Nombre: $("#txtNombre").val(),
+                    US_Documento: $("#txtDoc").val(),
+                    US_Email: $("#txtCorreo").val(),
+                    US_Tipodedocumento: $("#txtTipoDoc").val(),
+                    US_Estado: $("#txtEstado").val(),
+                    US_Password: $("#txtCont").val(),
+                }
+            };
+
+
+            jQuery.ajax({
+                url: "@Url.Action("Guardar", "UsuariosBI")",
+                type: "POST",
+                data: JSON.stringify($data),
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+
+                    if (data.resultado) {
+                        tabla_persona.ajax.reload();
+                        $('#FormModal').modal('hide');
+                    } else {
+                        alert("No se pudo guardar los cambios");
+                    }
+                },
+                error: function (error) {
+                    console.log(error)
+                },
+                beforeSend: function () {
+                }
+            });
+        }
+
+        function Eliminar($Id) {
+            if (confirm("¿Realmente desea eliminar?")) {
+                jQuery.ajax({
+                    url: "@Url.Action("Eliminar", "UsuariosBI")" + "?id=" + $Id,
+                    type: "GET",
+                    dataType: "json",
+                    contentType: "application/json; charset=utf-8",
+                    success: function (data) {
+                        if (data.resultado) {
+                            tabla_persona.ajax.reload();
+                        }
+                    }
+                });
+            }
+        }
+    </script>
+}

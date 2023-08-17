@@ -1,0 +1,80 @@
+﻿@model EJERCICIOMVC.Models.Usuario
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Borrar</h2>
+
+<div>
+    <h4>Usuario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.US_Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.US_Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.US_Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.US_Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.US_Estado)
+        </dt>
+
+        <dd>
+            @if(Model.US_Estado == 1)
+            {
+                <span>Activo</span>
+            }
+             else if(Model.US_Estado == 0)
+            {
+                <span>Inactivo</span>
+            }
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.US_Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.US_Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.US_Tipodedocumento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.US_Tipodedocumento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.US_Documento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.US_Documento)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+<div class="form-actions no-color">
+    <input type="submit" value="Borrar" class="btn btn-danger" /> |
+    @Html.ActionLink(" Regresar", "Index", null, htmlAttributes: new { @class = "btn btn-outline-primary bi bi-arrow-return-left" })
+
+</div>
+    }
+</div>

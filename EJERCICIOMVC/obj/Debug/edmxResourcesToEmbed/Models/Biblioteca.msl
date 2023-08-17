@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="bibliosafeModelStoreContainer" CdmEntityContainer="bibliosafeEntities">
+    <EntitySetMapping Name="Autor">
+      <EntityTypeMapping TypeName="bibliosafeModel.Autor">
+        <MappingFragment StoreEntitySet="Autor">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="AU_TipoIdentificador" ColumnName="AU_TipoIdentificador" />
+          <ScalarProperty Name="AU_Identificacion" ColumnName="AU_Identificacion" />
+          <ScalarProperty Name="AU_Nombre" ColumnName="AU_Nombre" />
+          <ScalarProperty Name="AU_FechaCreacion" ColumnName="AU_FechaCreacion" />
+          <ScalarProperty Name="AU_FechaModificacion" ColumnName="AU_FechaModificacion" />
+          <ScalarProperty Name="AU_UsuarioCreacion" ColumnName="AU_UsuarioCreacion" />
+          <ScalarProperty Name="AU_UsuarioModificacion" ColumnName="AU_UsuarioModificacion" />
+          <ScalarProperty Name="AU_Estado" ColumnName="AU_Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ejemplar">
+      <EntityTypeMapping TypeName="bibliosafeModel.Ejemplar">
+        <MappingFragment StoreEntitySet="Ejemplar">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EJ_NombreLibro" ColumnName="EJ_NombreLibro" />
+          <ScalarProperty Name="EJ_CodigoEjemplar" ColumnName="EJ_CodigoEjemplar" />
+          <ScalarProperty Name="EJ_CodigoLibro" ColumnName="EJ_CodigoLibro" />
+          <ScalarProperty Name="EJ_Estado" ColumnName="EJ_Estado" />
+          <ScalarProperty Name="EJ_FechaCreacion" ColumnName="EJ_FechaCreacion" />
+          <ScalarProperty Name="EJ_FechaModificacion" ColumnName="EJ_FechaModificacion" />
+          <ScalarProperty Name="EJ_UsuarioCreacion" ColumnName="EJ_UsuarioCreacion" />
+          <ScalarProperty Name="EJ_UsuarioModificacion" ColumnName="EJ_UsuarioModificacion" />
+          <ScalarProperty Name="EJ_TipoEjemplar" ColumnName="EJ_TipoEjemplar" />
+          <ScalarProperty Name="EJ_EstadoSistema" ColumnName="EJ_EstadoSistema" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Libro">
+      <EntityTypeMapping TypeName="bibliosafeModel.Libro">
+        <MappingFragment StoreEntitySet="Libro">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="LI_Codigo" ColumnName="LI_Codigo" />
+          <ScalarProperty Name="LI_Nombre" ColumnName="LI_Nombre" />
+          <ScalarProperty Name="LI_Autor" ColumnName="LI_Autor" />
+          <ScalarProperty Name="LI_Estado" ColumnName="LI_Estado" />
+          <ScalarProperty Name="LI_FechaCreacion" ColumnName="LI_FechaCreacion" />
+          <ScalarProperty Name="LI_RE_FechaModificacion" ColumnName="LI_RE_FechaModificacion" />
+          <ScalarProperty Name="LI_RE_UsuarioCreacion" ColumnName="LI_RE_UsuarioCreacion" />
+          <ScalarProperty Name="LI_RE_UsuarioModificacion" ColumnName="LI_RE_UsuarioModificacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrestamoUsuario">
+      <EntityTypeMapping TypeName="bibliosafeModel.PrestamoUsuario">
+        <MappingFragment StoreEntitySet="PrestamoUsuario">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="PU_CodigoUsuario" ColumnName="PU_CodigoUsuario" />
+          <ScalarProperty Name="PU_NombreEjemplar" ColumnName="PU_NombreEjemplar" />
+          <ScalarProperty Name="PU_CodigoEjemplar" ColumnName="PU_CodigoEjemplar" />
+          <ScalarProperty Name="PU_FechaExtraccion" ColumnName="PU_FechaExtraccion" />
+          <ScalarProperty Name="PU_FechaDevolucion" ColumnName="PU_FechaDevolucion" />
+          <ScalarProperty Name="PU_PrestamoActual" ColumnName="PU_PrestamoActual" />
+          <ScalarProperty Name="PU_EstadoDevolucion" ColumnName="PU_EstadoDevolucion" />
+          <ScalarProperty Name="PU_FechaCreacion" ColumnName="PU_FechaCreacion" />
+          <ScalarProperty Name="PU_FechaModificacion" ColumnName="PU_FechaModificacion" />
+          <ScalarProperty Name="PU_UsuarioCreacion" ColumnName="PU_UsuarioCreacion" />
+          <ScalarProperty Name="PU_UsuarioModificacion" ColumnName="PU_UsuarioModificacion" />
+          <ScalarProperty Name="PU_Estado" ColumnName="PU_Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reparacion">
+      <EntityTypeMapping TypeName="bibliosafeModel.Reparacion">
+        <MappingFragment StoreEntitySet="Reparacion">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="RE_EjemplarCodigo" ColumnName="RE_EjemplarCodigo" />
+          <ScalarProperty Name="RE_EstadoInicial" ColumnName="RE_EstadoInicial" />
+          <ScalarProperty Name="RE_InicioReparacion" ColumnName="RE_InicioReparacion" />
+          <ScalarProperty Name="RE_FinalizacionReparacion" ColumnName="RE_FinalizacionReparacion" />
+          <ScalarProperty Name="RE_EstadoActualFisico" ColumnName="RE_EstadoActualFisico" />
+          <ScalarProperty Name="RE_Estado" ColumnName="RE_Estado" />
+          <ScalarProperty Name="RE_FechaReIncorporacion" ColumnName="RE_FechaReIncorporacion" />
+          <ScalarProperty Name="RE_FechaCreacion" ColumnName="RE_FechaCreacion" />
+          <ScalarProperty Name="RE_FechaModificacion" ColumnName="RE_FechaModificacion" />
+          <ScalarProperty Name="RE_UsuarioCreacion" ColumnName="RE_UsuarioCreacion" />
+          <ScalarProperty Name="RE_UsuarioModificacion" ColumnName="RE_UsuarioModificacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoDocumento">
+      <EntityTypeMapping TypeName="bibliosafeModel.TipoDocumento">
+        <MappingFragment StoreEntitySet="TipoDocumento">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="TD_Codigo" ColumnName="TD_Codigo" />
+          <ScalarProperty Name="TD_Nombre" ColumnName="TD_Nombre" />
+          <ScalarProperty Name="TD_Estado" ColumnName="TD_Estado" />
+          <ScalarProperty Name="TD_FechaCreacion" ColumnName="TD_FechaCreacion" />
+          <ScalarProperty Name="TD_FechaModificacion" ColumnName="TD_FechaModificacion" />
+          <ScalarProperty Name="TD_UsuarioModificacion" ColumnName="TD_UsuarioModificacion" />
+          <ScalarProperty Name="TD_UsuarioCreacion" ColumnName="TD_UsuarioCreacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="bibliosafeModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="US_Codigo" ColumnName="US_Codigo" />
+          <ScalarProperty Name="US_Nombre" ColumnName="US_Nombre" />
+          <ScalarProperty Name="US_Password" ColumnName="US_Password" />
+          <ScalarProperty Name="US_Estado" ColumnName="US_Estado" />
+          <ScalarProperty Name="US_FechaCreacion" ColumnName="US_FechaCreacion" />
+          <ScalarProperty Name="US_FechaModificacion" ColumnName="US_FechaModificacion" />
+          <ScalarProperty Name="US_UsuarioCreacion" ColumnName="US_UsuarioCreacion" />
+          <ScalarProperty Name="US_UsuarioModificacion" ColumnName="US_UsuarioModificacion" />
+          <ScalarProperty Name="US_Email" ColumnName="US_Email" />
+          <ScalarProperty Name="US_Tipodedocumento" ColumnName="US_Tipodedocumento" />
+          <ScalarProperty Name="US_Documento" ColumnName="US_Documento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INVENTARIO">
+      <EntityTypeMapping TypeName="bibliosafeModel.INVENTARIO">
+        <MappingFragment StoreEntitySet="INVENTARIO">
+          <ScalarProperty Name="Libro" ColumnName="Libro" />
+          <ScalarProperty Name="NombreLibro" ColumnName="NombreLibro" />
+          <ScalarProperty Name="NumEjemplar" ColumnName="NumEjemplar" />
+          <ScalarProperty Name="Ejemplareslibres" ColumnName="Ejemplareslibres" />
+          <ScalarProperty Name="EjemplaresPrestados" ColumnName="EjemplaresPrestados" />
+          <ScalarProperty Name="EjemplaresReparacion" ColumnName="EjemplaresReparacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Libros_Por_Autor">
+      <EntityTypeMapping TypeName="bibliosafeModel.Libros_Por_Autor">
+        <MappingFragment StoreEntitySet="Libros_Por_Autor">
+          <ScalarProperty Name="AU_Nombre" ColumnName="AU_Nombre" />
+          <ScalarProperty Name="CodigoAutor" ColumnName="CodigoAutor" />
+          <ScalarProperty Name="NLibros" ColumnName="NLibros" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SUMATORIATIEMPOS">
+      <EntityTypeMapping TypeName="bibliosafeModel.SUMATORIATIEMPOS">
+        <MappingFragment StoreEntitySet="SUMATORIATIEMPOS">
+          <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="Dias_Prestamos" ColumnName="Dias_Prestamos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="EJEMPLARESINTERVALO" FunctionName="bibliosafeModel.Store.EJEMPLARESINTERVALO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="bibliosafeModel.EJEMPLARESINTERVALO_Result">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="LIBROSPORUSUARIO" FunctionName="bibliosafeModel.Store.LIBROSPORUSUARIO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="bibliosafeModel.LIBROSPORUSUARIO_Result">
+          <ScalarProperty Name="CodigoUsuario" ColumnName="CodigoUsuario" />
+          <ScalarProperty Name="NombreUsuario" ColumnName="NombreUsuario" />
+          <ScalarProperty Name="CodigoEjemplar" ColumnName="CodigoEjemplar" />
+          <ScalarProperty Name="NombreEjemplar" ColumnName="NombreEjemplar" />
+          <ScalarProperty Name="FechaPrestamo" ColumnName="FechaPrestamo" />
+          <ScalarProperty Name="FechaDevolucion" ColumnName="FechaDevolucion" />
+          <ScalarProperty Name="PRESTAMO_FINALIZADO" ColumnName="PRESTAMO_FINALIZADO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

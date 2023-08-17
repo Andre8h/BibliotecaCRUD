@@ -1,0 +1,63 @@
+﻿@model IEnumerable<EJERCICIOMVC.Models.INVENTARIO>
+
+@{
+    ViewBag.Title = "Inventario";
+}
+
+<h2>Inventario - Reporte</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Libro
+        </th>
+        <th>
+            Nombre del Libro
+        </th>
+        <th>
+            Numero de ejemplar
+        </th>
+        <th>
+            Esta Libre
+        </th>
+        <th>
+            Esta Prestado
+        </th>
+        <th>
+            Esta en reparacion
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.Libro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreLibro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumEjemplar)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ejemplareslibres)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EjemplaresPrestados)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EjemplaresReparacion)
+        </td>
+    </tr>
+
+
+ }
+
+</table>
+
+<div style="padding:10px; border:1px solid black">
+    <div><a href="@Url.Action("ReporteInventario",new {id= "PDF"})"> Inventario</a></div>
+    <div><a href="@Url.Action("ReporteAutores",new {id= "PDF"})"> Autores</a></div>
+    <div><a href="@Url.Action("ReporteSumatorias",new {id= "PDF"})"> Sumatorias</a></div>
+</div>

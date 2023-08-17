@@ -1,0 +1,75 @@
+﻿@model EJERCICIOMVC.Models.LoginDTO
+
+@{
+    ViewBag.Title = "Login";
+}
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mynerve&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/Content/style_LogIn.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container main">
+            <div class="row">
+                <div class="col-md-6 side-image">
+                    <img src="~/Content/IMG/safeweblogo-removebg-preview.png" alt="">
+                    <div class="text">
+                        <p>Bienvenido a <i>Bibliosafe</i></p>
+                    </div>
+                </div>
+                <div class="col-md-6 right">
+                    <div class="input-box">
+                        <header>Iniciar Sesion</header>
+                        <form action="@Url.Action("Login","Home")" method="post">
+                            <div class="input-field">
+                                <input type="text" name="Usuario" class="input" id="email" required autocomplete="off">
+                                <label for="email">Usuario</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="password" name="Password" class="input" id="password" required>
+                                <label for="password"> Password</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="submit" class="submit" value="Iniciar Sesion">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+@section Scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+
+    @if (ViewBag.Mensaje != null)
+    {
+        <Text>
+        <script>
+            var error
+            $(document).ready(function ()
+            {
+                Swal.fire({
+                    title: '@(ViewBag.error??true ? "Ocurrio un problema": "Exito")',
+                    text: '@ViewBag.Mensaje',
+                    icon: '@(ViewBag.error??true ? "error": "info")',
+                    confirmButtonText: 'Aceptar'
+
+
+                })
+            })
+
+        </script>
+        </Text>
+    }
+}

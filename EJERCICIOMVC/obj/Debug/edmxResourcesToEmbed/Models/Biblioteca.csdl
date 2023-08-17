@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bibliosafeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Autor">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AU_TipoIdentificador" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AU_Identificacion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AU_Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AU_FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="AU_FechaModificacion" Type="DateTime" Precision="3" />
+    <Property Name="AU_UsuarioCreacion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AU_UsuarioModificacion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AU_Estado" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Ejemplar">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EJ_NombreLibro" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EJ_CodigoEjemplar" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EJ_CodigoLibro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EJ_Estado" Type="Int32" Nullable="false" />
+    <Property Name="EJ_FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EJ_FechaModificacion" Type="DateTime" Precision="3" />
+    <Property Name="EJ_UsuarioCreacion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EJ_UsuarioModificacion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EJ_TipoEjemplar" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EJ_EstadoSistema" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Libro">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LI_Codigo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LI_Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LI_Autor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LI_Estado" Type="Int32" Nullable="false" />
+    <Property Name="LI_FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LI_RE_FechaModificacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LI_RE_UsuarioCreacion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LI_RE_UsuarioModificacion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PrestamoUsuario">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PU_CodigoUsuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PU_NombreEjemplar" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PU_CodigoEjemplar" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PU_FechaExtraccion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PU_FechaDevolucion" Type="DateTime" Precision="3" />
+    <Property Name="PU_PrestamoActual" Type="Int32" Nullable="false" />
+    <Property Name="PU_EstadoDevolucion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PU_FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PU_FechaModificacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PU_UsuarioCreacion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PU_UsuarioModificacion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PU_Estado" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Reparacion">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RE_EjemplarCodigo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RE_EstadoInicial" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RE_InicioReparacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="RE_FinalizacionReparacion" Type="DateTime" Precision="3" />
+    <Property Name="RE_EstadoActualFisico" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RE_Estado" Type="Int32" Nullable="false" />
+    <Property Name="RE_FechaReIncorporacion" Type="DateTime" Precision="3" />
+    <Property Name="RE_FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="RE_FechaModificacion" Type="DateTime" Precision="3" />
+    <Property Name="RE_UsuarioCreacion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RE_UsuarioModificacion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoDocumento">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TD_Codigo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TD_Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TD_Estado" Type="Int32" Nullable="false" />
+    <Property Name="TD_FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TD_FechaModificacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TD_UsuarioModificacion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TD_UsuarioCreacion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="US_Codigo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="US_Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="US_Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="US_Estado" Type="Int32" Nullable="false" />
+    <Property Name="US_FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="US_FechaModificacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="US_UsuarioCreacion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="US_UsuarioModificacion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="US_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="US_Tipodedocumento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="US_Documento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="INVENTARIO">
+    <Key>
+      <PropertyRef Name="Libro" />
+      <PropertyRef Name="NombreLibro" />
+      <PropertyRef Name="Ejemplareslibres" />
+      <PropertyRef Name="EjemplaresPrestados" />
+      <PropertyRef Name="EjemplaresReparacion" />
+    </Key>
+    <Property Name="Libro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NombreLibro" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NumEjemplar" Type="Int32" />
+    <Property Name="Ejemplareslibres" Type="String" MaxLength="19" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EjemplaresPrestados" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EjemplaresReparacion" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Libros_Por_Autor">
+    <Key>
+      <PropertyRef Name="AU_Nombre" />
+      <PropertyRef Name="CodigoAutor" />
+    </Key>
+    <Property Name="AU_Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CodigoAutor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NLibros" Type="Int32" />
+  </EntityType>
+  <EntityType Name="SUMATORIATIEMPOS">
+    <Key>
+      <PropertyRef Name="CODIGO" />
+      <PropertyRef Name="NOMBRE" />
+    </Key>
+    <Property Name="CODIGO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Dias_Prestamos" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="bibliosafeEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Autor" EntityType="Self.Autor" />
+    <EntitySet Name="Ejemplar" EntityType="Self.Ejemplar" />
+    <EntitySet Name="Libro" EntityType="Self.Libro" />
+    <EntitySet Name="PrestamoUsuario" EntityType="Self.PrestamoUsuario" />
+    <EntitySet Name="Reparacion" EntityType="Self.Reparacion" />
+    <EntitySet Name="TipoDocumento" EntityType="Self.TipoDocumento" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" />
+    <EntitySet Name="INVENTARIO" EntityType="Self.INVENTARIO" />
+    <EntitySet Name="Libros_Por_Autor" EntityType="Self.Libros_Por_Autor" />
+    <EntitySet Name="SUMATORIATIEMPOS" EntityType="Self.SUMATORIATIEMPOS" />
+    <FunctionImport Name="EJEMPLARESINTERVALO" ReturnType="Collection(bibliosafeModel.EJEMPLARESINTERVALO_Result)">
+      <Parameter Name="STARTTIME" Mode="In" Type="DateTime" />
+      <Parameter Name="FINISHTIME" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="LIBROSPORUSUARIO" ReturnType="Collection(bibliosafeModel.LIBROSPORUSUARIO_Result)">
+      <Parameter Name="STARTTIME" Mode="In" Type="DateTime" />
+      <Parameter Name="FINISHTIME" Mode="In" Type="DateTime" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="EJEMPLARESINTERVALO_Result">
+    <Property Type="String" Name="Codigo" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="LIBROSPORUSUARIO_Result">
+    <Property Type="String" Name="CodigoUsuario" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="NombreUsuario" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="CodigoEjemplar" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="NombreEjemplar" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="FechaPrestamo" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="FechaDevolucion" Nullable="true" Precision="23" />
+    <Property Type="String" Name="PRESTAMO_FINALIZADO" Nullable="true" MaxLength="2" />
+  </ComplexType>
+</Schema>
